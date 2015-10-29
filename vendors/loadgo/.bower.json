@@ -1,0 +1,12 @@
+{
+  "name": "loadgo",
+  "homepage": "https://github.com/franverona/loadgo",
+  "_release": "6f87f28eb1",
+  "_resolution": {
+    "type": "commit",
+    "commit": "6f87f28eb185286f2904bd8b3c0da82868dd1905"
+  },
+  "_source": "git://github.com/franverona/loadgo.git",
+  "_target": "6f87f28eb185286f2904bd8b3c0da82868dd1905",
+  "_originalSource": "git://github.com/franverona/loadgo.git"
+}
