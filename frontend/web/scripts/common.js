@@ -444,12 +444,13 @@
         }
       });
     });
+    
+    
     loading.animation.to($('nav.home'), loading.time * 1.5, {
       marginTop: '65px',
       opacity: 1,
       ease: loading.easing
-    }, '-=2');
-    loading.animation.to($('nav.menu'), loading.time * .5, {
+    }, '-=2').to($('nav.menu'), loading.time * .5, {
       width: '249px',
       ease: loading.easing
     }, '-=2.5').to($('nav.menu .text'), loading.time, {
@@ -457,6 +458,9 @@
       opacity: 1,
       ease: loading.easing
     }, '-=1.5').to($('#headerGroup'), loading.time, {
+      opacity: 1,
+      ease: loading.easing
+    }, '-=1.5').to($('#wrapper'), loading.time * 1.5, {
       opacity: 1,
       ease: loading.easing
     }, '-=1.5').to($('#sliderWrap'), loading.time * 1, {

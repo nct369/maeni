@@ -93,6 +93,16 @@ class SiteController extends Controller
             'category' => $category,
         ]);
     }
+    
+    /**
+     * Displays Category.
+     *
+     * @return mixed
+     */
+    public function actionTimeline()
+    {
+        return $this->render('timeline');
+    }
 
     /**
      * Logs in a user.
@@ -155,9 +165,14 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionAbout()
+    public function actionCustomerCare()
     {
-        return $this->render('about');
+        return $this->render('customer-care');
+    }
+    
+    public function actionCorporate()
+    {
+        return $this->render('corporate');
     }
 
     /**

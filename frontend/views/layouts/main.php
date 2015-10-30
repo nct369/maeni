@@ -36,18 +36,18 @@ AppAsset::register($this);
     <header>
       <nav><span>Store locator: Azerbaijan, Baku</span>
         <ul>
-          <li><a href="http://mail.ru">Russia, Moscow</a></li>
-          <li><a href="http://mail.ru">UK, London</a></li>
-          <li><a href="http://mail.ru">Germany, Berlin</a></li>
-          <li><a href="http://mail.ru">Ukraine, Kiev</a></li>
+          <li><a href="#">Russia, Moscow</a></li>
+          <li><a href="#">UK, London</a></li>
+          <li><a href="#">Germany, Berlin</a></li>
+          <li><a href="#">Ukraine, Kiev</a></li>
         </ul>
       </nav>
-      <div class="navcenter"><a href="<?=Url::to(['site/login'])?>">Login</a><span>|</span><a href="<?=Url::to(['site/signup'])?>">Register</a></div>
-      <div class="cart"><a href="http://mail.ru">Shopping cart</a></div>
+      <div class="navcenter"><a href="#">Login</a><span>|</span><a href="#">Register</a></div>
+      <div class="cart"><a href="#">Shopping cart</a></div>
       <nav><span>Language: in english</span>
         <ul>
-          <li><a href="http://mail.ru">по-русски</a></li>
-          <li><a href="http://mail.ru">azərbaycanca</a></li>
+          <li><a href="#">по-русски</a></li>
+          <li><a href="#">azərbaycanca</a></li>
         </ul>
       </nav>
     </header>
@@ -72,12 +72,12 @@ AppAsset::register($this);
         <a href="mailto:office@maeni.com" class="<?=(Yii::$app->controller->action->id=='index')?'home':''?>">office@maeni.com</a></span>
       <nav><span>World of Maeni</span>
         <ul>
-          <li><a href="http://mail.ru">World of Maeni</a></li>
-          <li><a href="http://mail.ru">Customer care</a></li>
-          <li><a href="http://mail.ru">Corporate</a></li>
-          <li><a href="http://mail.ru">Follow us</a></li>
-          <li><a href="http://mail.ru">Newsletter</a></li>
-          <li><a href="http://mail.ru">Contacts</a></li>
+          <li><a href="<?=Url::to(['site/timeline'])?>">World of Maeni</a></li>
+          <li><a href="<?=Url::to(['site/customer-care'])?>">Customer care</a></li>
+          <li><a href="<?=Url::to(['site/corporate'])?>">Corporate</a></li>
+          <li><a href="#">Follow us</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="<?=Url::to(['site/contact'])?>">Contacts</a></li>
         </ul>
       </nav>
     </footer>

@@ -525,6 +525,7 @@ nav.home {
 
 /* line 59 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
 .menu ul li a {
+  text-transform: uppercase;
   display: block;
   font-size: 15px;
   cursor: pointer !important;
@@ -543,6 +544,7 @@ nav.home li {
 }
 
 nav.home li a {
+  text-transform: uppercase;
   display: block;
   color: #fff;
   text-decoration: none;
@@ -717,6 +719,7 @@ nav.home li a {
 
 /* line 102 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
 #headerGroup h1 {
+  text-transform: uppercase;
   color: #fff;
   font-weight: 300;
   font-size: 25px;
@@ -743,7 +746,7 @@ nav.home li a {
   margin-left: -50px;
   left: 50%;
   position: relative;
-  margin-top: 23px;
+  margin-top: 10px;
 }
 
 div.desc {
@@ -900,4 +903,62 @@ div.desc p:first-child {
 /* line 196 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
 #zoomer img {
   display: block;
+}
+
+#wrapper {
+  position: absolute;
+  width: 1000px;
+  right: 0;
+  left: 0;
+  display: block;
+  top: 300px;
+  margin: 0 auto;
+  color: #B2B2B2;
+  opacity: 0;
+  font-size: 15px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  text-align: left;
+  z-index: 3;
+}
+
+#wrapper p{
+  margin-bottom: 15px;
+}
+
+#wrapper .form-control{
+  word-spacing: 0px;
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-style: normal;
+  color: #B2B2B2;
+  font-size: 12px;
+  padding: 9px;
+  border-radius: 0;
+  background-color: #fff;
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+#wrapper .form-group{
+  width: 100%;
+  text-align: center;
+}
+
+.clear{
+  clear: both;
+}
+
+.btn.btn-primary{
+    padding: 10px 60px!important;
+    background: none!important;
+    border: 1px solid rgb(140, 140, 140)!important;
+    color: rgba(140, 140, 140, 0.9)!important;
+    font-weight: 300!important;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+    cursor: pointer;
 }
