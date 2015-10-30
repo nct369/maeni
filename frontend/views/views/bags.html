@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="cleartype" content="on">
+  <meta name="robots" content="index follow">
+  <meta name="revisit-after" content="1 month">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>Bags | Maeni</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href="/styles/home.css" rel="stylesheet">
+</head>
+<body>
+  <div class="border top"></div>
+  <div class="border bottom"></div>
+  <div class="border left"></div>
+  <div class="border right"></div>
+  <div id="site">
+    <header>
+      <nav><span>Store locator: Azerbaijan, Baku</span>
+        <ul>
+          <li><a href="http://mail.ru">Russia, Moscow</a></li>
+          <li><a href="http://mail.ru">UK, London</a></li>
+          <li><a href="http://mail.ru">Germany, Berlin</a></li>
+          <li><a href="http://mail.ru">Ukraine, Kiev</a></li>
+        </ul>
+      </nav>
+      <div class="navcenter"><a href="http://mail.ru">Login</a><span>|</span><a href="http://mail.ru">Register</a></div>
+      <div class="cart"><a href="http://mail.ru">Shopping cart</a></div>
+      <nav><span>Language: in english</span>
+        <ul>
+          <li><a href="http://mail.ru">по-русски</a></li>
+          <li><a href="http://mail.ru">azərbaycanca</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="loading"><img id="logo" src="/furniture/logo_white_small.png" alt="Logo" style="opacity: 0"></div>
+    <nav class="menu"><span class="text">MENU</span><img src="/furniture/close.png" alt="" class="icon">
+      <ul>
+        <li><a href="./home.html">HOME</a></li>
+        <li><a href="./timeline.html">MAN</a></li>
+        <li><a href="./timeline.html">WOMAN</a></li>
+        <li><a href="./collection.html">KIDS</a></li>
+        <li><a href="./bags.html">BAGS AND SHOES</a></li>
+        <li><a href="./bags.html">ACCESSORIES</a></li>
+      </ul>
+    </nav>
+    <div id="headerGroup">
+      <h1>WOMAN BAGS</h1>
+      <div class="separator"></div>
+      <h2><a href="./collection.html">ROYAL COLLECTION</a></h2>
+    </div>
+    <div class="desc">
+      <p>genuine leather</p>
+      <p>
+        The city was most probably founded and named by
+        the Etruscans, for a parma (circular shield) was a Latin
+      </p>
+    </div><img id="bg-img" src="/images/bags.jpg" alt="bg">
+    <div class="frame"></div>
+    <footer><span class="text">
+        MAENI s.n.c Via Pasubio, 7/C-43100-Parma-Italy Tel: +39 0521 772156-773763 r.a Fax +390521 773117-789545 &nbsp;
+        <a href="mailto:office@maeni.com">office@maeni.com</a></span>
+      <nav><span>World of Maeni</span>
+        <ul>
+          <li><a href="http://mail.ru">World of Maeni</a></li>
+          <li><a href="http://mail.ru">Customer care</a></li>
+          <li><a href="http://mail.ru">Corporate</a></li>
+          <li><a href="http://mail.ru">Follow us</a></li>
+          <li><a href="http://mail.ru">Newsletter</a></li>
+          <li><a href="http://mail.ru">Contacts</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+  <script src="/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="/vendors/loadgo/loadgo.min.js"></script>
+  <script src="/vendors/queryloader2/queryloader2.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TimelineLite.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/ColorPropsPlugin.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/DirectionalRotationPlugin.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSRulePlugin.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/AttrPlugin.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/TextPlugin.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/RoundPropsPlugin.min.js"></script>
+  <script>
+    var loadInterval;
+    
+    $('#logo').loadgo({
+    	'opacity':  .6,
+    	'image':    '/furniture/logo_gold_small.png',
+    	'bgcolor': 'transparent'
+    })
+    
+    $(document).ready(function () {
+    	$("body").queryLoader2({
+    		barColor: "transparent",
+    		backgroundColor: "transparent",
+    		percentage: true,
+    		barHeight: 0,
+    		minimumTime: 200,
+    		fadeOutTime: 0
+    	});
+    
+    	$('#logo').removeAttr('style');
+    
+    	loadInterval = setInterval(function(){
+    		var str = $('#qLpercentage').text();
+    		str = str.substring(0, str.length - 1);
+    
+    		$('#logo').loadgo('setprogress', str);
+    	},200)
+    });
+    
+    $(window).load(function() {
+    	clearInterval(loadInterval);
+    	$('#logo').loadgo('setprogress', 100);
+    });
+  </script>
+  <script src="/scripts/bags.js"></script>
+</body></html>
