@@ -1,0 +1,903 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+a img {
+  border: none;
+}
+
+body,
+html {
+  background: #000;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+#bg-img {
+  position: fixed;
+  overflow: hidden;
+  display: block;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  z-index: 1;
+}
+
+
+
+.frame {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.65);
+  box-shadow: inset 0px 0px 400px #000;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.frame.home {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.border {
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.border.home {
+  background-color: #b8860b;
+}
+
+.border.left {
+  bottom: 60px;
+  left: 60px;
+  height: 0px;
+  width: 1px;
+}
+
+.border.top {
+  top: 60px;
+  left: 60px;
+  height: 1px;
+  width: 0px;
+}
+
+.border.right {
+  right: 60px;
+  top: 60px;
+  height: 0px;
+  width: 1px;
+}
+
+.border.bottom {
+  bottom: 60px;
+  right: 60px;
+  height: 1px;
+  width: 0px;
+}
+
+#site > footer {
+  position: absolute;
+  bottom: -100px;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  width: 100%;
+  font-weight: 300;
+  z-index: 3;
+}
+
+#site > footer.home {
+  color: #b8860b;
+}
+
+#site > footer > .text {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  position: absolute;
+  left: 60px;
+}
+
+#site > footer > .text > a {
+  color: #fff;
+  display: inline-block;
+  font-weight: 300;
+}
+
+#site > footer > .text > a.home {
+  color: #b8860b;
+}
+
+#site > footer > nav {
+  display: block;
+  font-size: 0;
+  right: 60px;
+  letter-spacing: -0.31em;
+  position: absolute;
+}
+
+#site > footer > nav:first-child {
+  left: 60px;
+}
+
+#site > footer > nav:last-child {
+  right: 60px;
+}
+
+#site > footer > nav > * {
+  font-size: 15px;
+  letter-spacing: normal;
+  cursor: default;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+
+#site > footer > nav ul {
+  display: none;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  width: 100px;
+  margin-left: -40px;
+  text-align: center;
+  padding: 0px 20px 20px 20px;
+  background-color: rgba(184,134,11,0.9);
+  z-index: 99999;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+#site > footer > nav ul li {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  padding: 20px 0px 0px 0px;
+}
+
+#site.home > header,
+#site.home > footer,
+#site.home > footer a,
+#site.home .navcenter a,
+#site.home .navcenter span,
+#site.home .cart > a {
+  color: #b8860b !important;
+}
+
+#site > footer > nav ul li a {
+  display: block;
+  font-size: 15px;
+  cursor: pointer !important;
+  color: #000 !important;
+  font-weight: 300;
+}
+
+#site.home > footer > nav ul li a{
+  color: #000 !important;
+}
+
+#site > header {
+  position: absolute;
+  top: -100px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
+  font-weight: 300;
+  z-index: 9999;
+}
+
+#site > header .navcenter {
+  display: block;
+  font-size: 0;
+  letter-spacing: -0.31em;
+  position: absolute;
+  width: 300px;
+  margin-left: -150px;
+  left: 50%;
+  z-index: 99998;
+}
+
+#site > header .navcenter > * {
+  font-size: 15px;
+  letter-spacing: normal;
+  cursor: default;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+
+#site > header .navcenter a,
+#site > header .navcenter span {
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 10px;
+}
+
+#site > header .navcenter span {
+  cursor: default;
+}
+
+#site > header .cart {
+  display: block;
+  font-size: 0;
+  letter-spacing: -0.31em;
+  position: absolute;
+  text-align: right;
+  z-index: 99998;
+}
+
+#site > header .cart > * {
+  font-size: 15px;
+  letter-spacing: normal;
+  cursor: default;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+
+#site > header .cart a,
+#site > header .cart span {
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 10px;
+}
+
+#site > header .cart span {
+  cursor: default;
+}
+
+#site > header nav {
+  display: block;
+  font-size: 0;
+  letter-spacing: -0.31em;
+  position: absolute;
+}
+
+#site > header nav:first-child {
+  left: 60px;
+}
+
+#site > header nav:last-child {
+  right: 60px;
+}
+
+#site > header nav > * {
+  font-size: 15px;
+  letter-spacing: normal;
+  cursor: default;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+
+#site > header nav ul {
+  display: none;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  padding: 0px 20px 20px 20px;
+  background-color: rgba(184,134,11,0.9);
+  margin-top: 22px;
+  z-index: 99999;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+#site > header nav ul li {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  padding: 20px 0px 0px 0px;
+}
+
+#site > header nav ul li a {
+  display: block;
+  font-size: 15px;
+  cursor: pointer !important;
+  color: #000 !important;
+  font-weight: 300;
+}
+
+
+
+#site:not(.home) > header nav > ul,
+#site:not(.home) > footer nav > ul,
+#site:not(.home) > footer a nav > ul,
+#site:not(.home) .navcenter a nav > ul,
+#site:not(.home) .navcenter span nav > ul,
+#site:not(.home) .cart > a nav > ul {
+  background-color: rgba(255,255,255,0.9);
+}
+
+.loading-home {
+  position: absolute;
+  width: 139px;
+  margin-left: -74.5px;
+  margin-top: -50px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+}
+
+.loading {
+  position: absolute;
+  width: 83px;
+  margin-left: 145px;
+  margin-top: 90px;
+  height: 60px;
+  z-index: 10;
+}
+
+nav.home {
+  position: absolute;
+  width: 1000px;
+  margin-left: -500px;
+  margin-top: 45px;
+  height: 30px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  font-size: 0;
+  letter-spacing: -0.31em;
+  text-align: center;
+}
+
+.menu {
+  width: 0px;
+  position: absolute;
+  margin-left: 61px;
+  margin-top: 180px;
+  z-index: 10;
+  border-top: 1px solid #fff;
+  text-align: center;
+  font-size: 0;
+  letter-spacing: -0.31em;
+}
+
+/* line 22 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+.menu span.text {
+  color: #fff;
+  font-weight: 300;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: normal;
+  display: inline-block;
+  margin-top: 70px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+/* line 32 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+.menu img.icon {
+  margin-top: 30px;
+  margin-left: 0px;
+  width: 0px;
+  height: 0px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 40 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+.menu ul {
+  display: none;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  position: absolute;
+  width: 209px;
+  text-align: center;
+  padding: 10px 20px 30px 20px;
+  background-color: rgba(0,0,0,0.9);
+  margin-top: 22px;
+}
+
+/* line 51 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+.menu ul li {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  padding: 20px 0px 0px 0px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/* line 59 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+.menu ul li a {
+  display: block;
+  font-size: 15px;
+  cursor: pointer !important;
+  color: #b8860b !important;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+nav.home li {
+  display: inline-block;
+  height: 30px;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+nav.home li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+#timeline {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin: 0px 60px;
+  margin-top: -130px;
+  z-index: 3;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+/* line 158 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #line {
+  margin-left: -600px;
+  left: 50%;
+  position: absolute;
+  overflow: visible;
+  font-size: 0;
+  z-index: 3;
+  letter-spacing: -0.31em;
+  text-align: center;
+  margin-top: 190px;
+}
+
+/* line 169 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #line .line {
+  height: 1px;
+  background-color: #fff;
+  width: 100%;
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  margin-top: 8px;
+  position: absolute;
+}
+
+/* line 178 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #line .timeAnchor {
+  font-size: 15px;
+  line-height: 20px;
+  display: inline-block;
+  color: #fff;
+  margin: 0px 50px;
+  letter-spacing: normal;
+  width: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 189 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #line .timeAnchor .circle {
+  display: block;
+  height: 16px;
+  background-color: #000;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  width: 16px;
+  margin-top: -8px;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+/* line 200 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #line .timeAnchor .year {
+  display: block;
+  margin-top: 20px;
+}
+
+/* line 204 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #timeWrap {
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 208 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #timeWrap .time {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  font-size: 0;
+  letter-spacing: -0.31em;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+}
+
+/* line 216 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #timeWrap .time:first-child {
+  opacity: 1;
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+}
+
+/* line 219 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #timeWrap .time img {
+  letter-spacing: normal;
+  display: inline-block;
+  vertical-align: middle;
+  width: 210px;
+  height: 140px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  margin: 0 50px;
+}
+
+/* line 230 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #timeWrap .time img:first-child {
+  margin-left: 0px;
+}
+
+/* line 233 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#timeline #timeWrap .time img:last-child {
+  margin-right: 0px;
+}
+
+
+
+/* line 87 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#headerGroup:not(.collection){
+  position: absolute;
+  width: 1000px;
+  left: 50%;
+  top: 123px;
+  margin-left: -500px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  text-align: center;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  z-index: 3;
+}
+
+#headerGroup.collection{
+    position: absolute;
+    width: 1000px;
+    right: 100px;
+    top: 98px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    text-align: right;
+    z-index: 4;
+}
+
+/* line 98 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#headerGroup a {
+  text-decoration: none;
+  display: block;
+}
+
+/* line 102 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#headerGroup h1 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+/* line 108 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#headerGroup h1 a {
+  color: #b8860b !important;
+}
+
+#headerGroup h2 {
+    color: #b8860b;
+    font-weight: 100;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+/* line 111 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+#headerGroup .separator {
+  height: 1px;
+  width: 100px;
+  background-color: #b8860b;
+  margin-left: -50px;
+  left: 50%;
+  position: relative;
+  margin-top: 23px;
+}
+
+div.desc {
+  position: absolute;
+  width: 1000px;
+  margin-left: -500px;
+  left: 50%;
+  bottom: 110px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  font-weight: 300;
+  z-index: 2;
+}
+
+/* line 135 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+div.desc h2 {
+  color: #b8860b;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 141 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+div.desc p {
+  padding-bottom: 10px;
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+
+/* line 145 : /Users/jamillazarev/www/maeni/assets/styles/timeline.styl */
+div.desc p:first-child {
+  margin-top: 90px;
+}
+
+#sliderWrap {
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+/* line 123 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#slider {
+  position: absolute;
+  font-size: 0;
+  letter-spacing: -0.31em;
+  left: 50%;
+  overflow: hidden;
+  z-index: 3;
+}
+
+/* line 131 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#slider .slide {
+  display: block;
+  position: absolute;
+  letter-spacing: normal;
+  top: 0;
+  height: 100%;
+  opacity: 0.35;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+  filter: alpha(opacity=35);
+  text-decoration: none;
+  color: #b8860b;
+  font-weight: 100;
+  font-size: 25px;
+  cursor: pointer;
+  line-height: 30px;
+}
+
+/* line 145 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#slider .slide .overlay {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 15px;
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(47,29,20,0.9);
+}
+
+/* line 157 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#slider .slide .overlay .text {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+}
+
+/* line 163 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#slider .slide .overlay .header {
+  margin-bottom: 20px;
+  display: block;
+  padding: 10px 10px 0px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+/* line 169 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#slider .slide .overlay .button {
+  width: 100px;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #b8860b;
+  font-size: 15px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  box-sizing: border-box;
+}
+
+/* line 180 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#slider .slide img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* line 186 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#zoomer {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 9999999;
+  background-color: #fff;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  overflow: hidden;
+}
+
+/* line 196 : /Users/jamillazarev/www/maeni/assets/styles/collection.styl */
+#zoomer img {
+  display: block;
+}

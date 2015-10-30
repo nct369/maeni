@@ -8,14 +8,14 @@
   <meta name="keywords" content="">
   <title>Home page | Maeni</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"><link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,latin-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
-  <link href="/styles/home.css" rel="stylesheet">
+  <link href="/styles/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="border top"></div>
-  <div class="border bottom"></div>
-  <div class="border left"></div>
-  <div class="border right"></div>
-  <div id="site">
+  <div class="border home top"></div>
+  <div class="border home bottom"></div>
+  <div class="border home left"></div>
+  <div class="border home right"></div>
+  <div id="site" class="home">
     <header>
       <nav><span>Store locator: Azerbaijan, Baku</span>
         <ul>
@@ -35,7 +35,7 @@
       </nav>
     </header>
     
-    <div class="loading"><img id="logo" src="/furniture/logo_gold.png" alt="Logo" style="opacity: 0"></div>
+    <div class="loading-home"><img id="logo" src="/furniture/logo_gold.png" alt="Logo" style="opacity: 0"></div>
     <nav class="home">
       <ul>
         <li><a href="./timeline.html">MAN</a></li>
@@ -45,10 +45,10 @@
         <li><a href="./bags.html">ACCESSORIES</a></li>
       </ul>
     </nav><img id="bg-img" src="/images/bg.jpg" alt="bg">
-    <div class="frame"></div>
-    <footer><span class="text">
+    <div class="frame home"></div>
+    <footer class="home"><span class="text">
         MAENI s.n.c Via Pasubio, 7/C-43100-Parma-Italy Tel: +39 0521 772156-773763 r.a Fax +390521 773117-789545 &nbsp;
-        <a href="mailto:office@maeni.com">office@maeni.com</a></span>
+        <a href="mailto:office@maeni.com" class="home">office@maeni.com</a></span>
       <nav><span>World of Maeni</span>
         <ul>
           <li><a href="http://mail.ru">World of Maeni</a></li>
@@ -108,5 +108,5 @@
     	$('#logo').loadgo('setprogress', 100);
     });
   </script>
-  <script src="/scripts/home.js"></script>
+  <script src="/scripts/common.js"></script>
 </body></html>
