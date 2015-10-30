@@ -6,12 +6,15 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
+use frontend\models\Category;
+use frontend\models\Products;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\VarDumper;
 
 /**
  * Site controller
@@ -72,7 +75,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $categories = Category::find()->all();
+        return $this->render('index', [
+            'categories' => $categories,
+        ]);
+    }
+    
+    /**
+     * Displays Category.
+     *
+     * @return mixed
+     */
+    public function actionCollection()
+    {
+        $category = Category::find()->where('slug = :slug', [':slug' => Yii::$app->request->get('slug')])->one();
+        return $this->render('collection', [
+            'category' => $category,
+        ]);
     }
 
     /**

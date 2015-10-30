@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use frontend\models\Category;
 
 AppAsset::register($this);
 ?>
@@ -55,12 +56,10 @@ AppAsset::register($this);
     <div class="loading"><img id="logo" src="/furniture/logo_white_small.png" alt="Logo" style="opacity: 0"></div>
     <nav class="menu"><span class="text">MENU</span><img src="/furniture/close.png" alt="" class="icon">
       <ul>
-        <li><a href="./home.html">HOME</a></li>
-        <li><a href="./timeline.html">MAN</a></li>
-        <li><a href="./timeline.html">WOMAN</a></li>
-        <li><a href="./collection.html">KIDS</a></li>
-        <li><a href="./bags.html">BAGS AND SHOES</a></li>
-        <li><a href="./bags.html">ACCESSORIES</a></li>
+        <li><a href="<?=Url::to(['site/index'])?>">HOME</a></li>
+        <?php foreach (Category::find()->all() as $category) : ?>
+            <li><a href="<?=Url::to(['site/collection','slug'=>$category->slug])?>"><?=$category->name?></a></li>
+        <?php endforeach; ?>
       </ul>
     </nav>
     <?php endif; ?>
