@@ -8,10 +8,9 @@ use Yii;
  * This is the model class for table "category".
  *
  * @property integer $id
- * @property string $slug
  * @property string $name
- *
- * @property Products $id0
+ * @property string $slug
+ * @property string $status
  */
 class Category extends \yii\db\ActiveRecord
 {
@@ -29,8 +28,9 @@ class Category extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['slug', 'name'], 'required'],
-            [['slug', 'name'], 'string', 'max' => 50],
+            [['name', 'slug', 'status'], 'required'],
+            [['status'], 'string'],
+            [['name', 'slug'], 'string', 'max' => 100],
             [['slug'], 'unique']
         ];
     }
@@ -42,24 +42,14 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'slug' => 'Slug',
             'name' => 'Name',
+            'slug' => 'Slug',
+            'status' => 'Status',
         ];
     }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getId0()
-    {
-        return $this->hasOne(Products::className(), ['category_id' => 'id']);
-    }
     
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProducts()
+    public function getServices()
     {
-        return $this->hasMany(Products::className(), ['category_slug' => 'slug']);
+        return Service::find()->where(['category_id'=>$this->id, 'status'=>'1'])->all();
     }
 }

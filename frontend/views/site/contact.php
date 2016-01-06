@@ -6,50 +6,26 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yii\captcha\Captcha;
-$this->title = 'Contacts';
+
+$this->title = 'Əlaqə';
 ?>
-<div id="headerGroup">
-    <h1><?= Html::encode($this->title) ?></h1>
-    <div class="separator"></div>
-</div>
-<div id="wrapper">
+<h2 class="header"><?=$this->title?></h2>
+<div class="card-panel site-signup col l12">
 
-    <p style="text-align:center">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-    </p><br/><br/>
+    <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>              
-                
-                <div class="form-group field-contactform-name required" style="width:47%;">
-                    <input type="text" id="contactform-name" class="form-control" name="ContactForm[name]" placeholder="Name" required>
-                     <?= Html::error($model, 'name') ?>
-                </div>
-                <div class="form-group field-contactform-email required" style="width:47%; float: right">
-                    <input type="text" id="contactform-email" class="form-control" name="ContactForm[email]" placeholder="Email" required>
-                    <?= Html::error($model, 'email') ?>
-                </div>
-                <div class="clear"></div>
-                
-                <div class="form-group field-contactform-subject required">
-                    <input type="text" id="contactform-subject" class="form-control" name="ContactForm[subject]" placeholder="Subject" required>
-                    <?= Html::error($model, 'subject') ?>
-                </div>
-                
-                <div class="form-group field-contactform-body required">
-                    <textarea id="contactform-body" class="form-control" name="ContactForm[body]" rows="6" placeholder="Body" required></textarea>
-                    <?= Html::error($model, 'body') ?>
-                </div>                
-                <div class="clear"></div>
-                
-                <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                </div>
+        <?= $form->field($model, 'name', ['options'=>['class'=>'input-field col s12 m12 l6']]) ?>
 
-            <?php ActiveForm::end(); ?>
+        <?= $form->field($model, 'email', ['options'=>['class'=>'input-field col s12 m12 l6']]) ?>
+
+        <?= $form->field($model, 'subject', ['options'=>['class'=>'input-field col s12']]) ?>
+
+        <?= $form->field($model, 'body', ['options'=>['class'=>'input-field col s12']])->textArea(['rows' => 6, 'class'=>'materialize-textarea']) ?>
+
+        <div class="form-group">
+            <?= Html::submitButton('Göndər', ['class' => 'waves-effect waves-light btn', 'name' => 'contact-button']) ?>
         </div>
-    </div>
 
-</div><img id="bg-img" src="/images/bg.jpg" alt="bg">
+    <?php ActiveForm::end(); ?>
+    
+</div>

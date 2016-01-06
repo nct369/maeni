@@ -11,8 +11,34 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+       'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ]
+    ],
     'components' => [
+        'request'=>[
+            'class' => 'common\components\Request',
+            'web'=> '/backend/web',
+            'adminUrl' => '/admin'
+        ],
+        'urlManager' => [
+            'class'=>'yii\web\UrlManager',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'enableStrictParsing' => false,
+            'rules' => [
+                ''=>'site/index',
+                [
+                    'pattern' => '<slug>',
+                    'route' => 'category/index',
+                    'suffix' => '/'
+                ],
+
+                //module
+                '<module:\w+>/<controller:\w+>/<action:[\w\-]+>'=>'<module>/<controller>/<action>',
+            ]
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

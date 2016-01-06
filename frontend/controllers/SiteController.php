@@ -6,15 +6,12 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
-use frontend\models\Category;
-use frontend\models\Products;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use yii\helpers\VarDumper;
 
 /**
  * Site controller
@@ -75,33 +72,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $categories = Category::find()->all();
-        return $this->render('index', [
-            'categories' => $categories,
-        ]);
-    }
-    
-    /**
-     * Displays Category.
-     *
-     * @return mixed
-     */
-    public function actionCollection()
-    {
-        $category = Category::find()->where('slug = :slug', [':slug' => Yii::$app->request->get('slug')])->one();
-        return $this->render('collection', [
-            'category' => $category,
-        ]);
-    }
-    
-    /**
-     * Displays Category.
-     *
-     * @return mixed
-     */
-    public function actionTimeline()
-    {
-        return $this->render('timeline');
+        $this->layout = 'home';
+        return $this->render('index');
     }
 
     /**
@@ -165,14 +137,14 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionCustomerCare()
+    public function actionAbout()
     {
-        return $this->render('customer-care');
+        return $this->render('about');
     }
     
-    public function actionCorporate()
+    public function actionTerms()
     {
-        return $this->render('corporate');
+        return $this->render('terms');
     }
 
     /**
@@ -182,7 +154,7 @@ class SiteController extends Controller
      */
     public function actionSignup()
     {
-        $model = new SignupForm();
+        $model = new SignupForm(['scenario' => 'user']);
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
@@ -192,6 +164,22 @@ class SiteController extends Controller
         }
 
         return $this->render('signup', [
+            'model' => $model,
+        ]);
+    }
+    
+    public function actionSignupCompany()
+    {
+        $model = new SignupForm(['scenario' => 'company']);
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signupCompany()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+
+        return $this->render('signup-company', [
             'model' => $model,
         ]);
     }

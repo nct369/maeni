@@ -1,0 +1,135 @@
+@media only screen and (max-width : 1400px) {
+    .blog-item .blog-item-text{
+        top: 5%;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+	.menu .sosial_links{
+		display: none;
+	}
+}
+
+@media only screen and (max-width : 992px) {
+    .ih-item.circle {
+        width: 80%;
+        height: 80%;
+    }
+    .ih-item.circle.effect3.left_to_right .ih-item-hover .img {
+        z-index: 13;
+        -webkit-transform: scale(0.5) translateX(100%);
+        -moz-transform: scale(0.5) translateX(100%);
+        -ms-transform: scale(0.5) translateX(100%);
+        -o-transform: scale(0.5) translateX(100%);
+        transform: scale(0.5) translateX(100%);
+    }
+    .ih-item.circle.effect3.left_to_right .ih-item-hover .info {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+    .ih-item.circle.effect3.left_to_right .ih-item-hover .buttons a{
+        opacity: 1;
+        right: 20%;
+    }
+    .ih-item.circle.effect3.left_to_right .ih-item-hover .buttons > a:first-child{
+        top: 14%;
+    }
+    .ih-item.circle.effect3.left_to_right .ih-item-hover .buttons > a:last-child{
+        bottom: 14%;
+    }
+    .ih-item.circle.effect3.left_to_right .ih-item-hover .img h4{
+        opacity: 0;
+    }
+    
+    #plan-overlay{
+        background: transparent;
+    }
+    header .valign-wrapper.card-panel{
+        margin-top: 100px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+    .menu nav{
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        position: fixed;
+        width: 100%;
+        right: 0;
+        top: 0;
+        left: 0;
+        z-index:990;
+    }
+    
+    main{
+        margin-top: 90px;
+    }
+    #side-toolbar .row-nav{
+        display: none;
+    }
+    #side-toolbar.side-nav.fixed {
+        width: 80px;
+        position: fixed;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        overflow: hidden;
+        overflow-y: visible;
+    }
+    
+    footer .footer_content ul li{
+      margin-left: 10px;
+    }
+    
+    .category-sidenav{
+        padding: 0 30px;
+    }
+    
+    .blog-item .blog-item-tags{
+        display: none;
+    }
+    
+    .blog-item .blog-item-text p{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .blog-item .blog-item-text{
+        left: 5%;
+        height: 90%;
+        text-align: center;
+        width: 90%;
+    }
+    
+    .blog-item .blog-item-text h3{
+        font-size: 18px;
+    }
+    .plan-content-view-body{
+        padding: 30px;
+    }
+    .plan-content-view .plan-content-header{
+        padding: 0;
+    }
+    .ui-datepicker-inline td a{
+        width: 27px;
+        height: 27px;
+        padding: 0;
+    }
+    
+    /*FILTER MENU*/
+    .filter-menu a{
+      font-size: 40px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .album-slider-nav .btn.center{
+        width: 150px;
+    }
+}
